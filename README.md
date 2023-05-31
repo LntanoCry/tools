@@ -13,3 +13,5 @@ getbox.py:
 merge.py:
 将多个txt文件合并为一个1
 
+voc2coco.py
+将voc格式转换为coco格式
