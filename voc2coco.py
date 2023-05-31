@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 import os
 import json
 
+# coco键值的定义
 coco = dict()
 coco['images'] = []
 coco['type'] = 'instances'
@@ -12,6 +13,7 @@ category_set = dict()
 image_set = set()
 # 注意具体应用中，类别索引是从0开始，还是从1开始。
 # 若从1开始（包含背景的情况）下一句代码需改成category_item_id = 0
+# 0开始:-1 ; 1开始:0
 category_item_id = -1
 image_id = 0
 annotation_id = 0
@@ -286,9 +288,9 @@ def parseXmlFiles(xml_path, json_save_path):
 
 if __name__ == '__main__':
     # 通过txt文件生成
-    voc_data_dir="E:\Dataset\detector\last_ann\VOCdevkit\VOC2007" #整个数据集文件夹所在路径
-    json_save_path="E:\Dataset\detector\last_ann\VOCdevkit/coco2007val.json" #生成后的文件存放路径和生成文件的名字
-    parseXmlFiles_by_txt(voc_data_dir, json_save_path, "val")
+    voc_data_dir="E:\Dataset\inf_Integrated\VOC2007" # 整个数据集文件夹所在路径
+    json_save_path="E:\Dataset\inf_Integrated\coco\coco2007test.json" # 生成后的文件存放路径和生成文件的名字
+    parseXmlFiles_by_txt(voc_data_dir, json_save_path, "test")
 
     # # 通过文件夹生成
     # ann_path = "E:/VOCdevkit/VOC2007/Annotations"
