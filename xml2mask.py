@@ -31,9 +31,9 @@ def parse_rec(filename):
 
 fontPath = "C:\Windows\Fonts\Consolas\consola.ttf"  # 字体路径
 
-ann_path = r'E:\Dataset\detector\last_ann\Annotations'  # xml文件所在路径
-pic_path = r'E:\Dataset\detector\image_all_jpg'  # 样本图片路径
-label_img_path = r'E:\Dataset\detector\last_ann\mask'
+ann_path = r'E:\Dataset\inf_voc_fuhe\VOC2007\Annotations'  # xml文件所在路径
+pic_path = r'E:\Dataset\inf_voc_fuhe\VOC2007\JPEGImages'  # 样本图片路径
+label_img_path = r'E:\Dataset\inf_Integrated\VOC\masks'
 if not os.path.exists(label_img_path):  # 判断是否存在文件夹如果不存在则创建为文件夹
     os.makedirs(label_img_path)
 font = ImageFont.truetype(fontPath, 16)

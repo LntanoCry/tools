@@ -13,7 +13,7 @@ def objFileName():
     生成文件名列表
     :return:
     '''
-    local_file_name_list = r'E:\Dataset\detector\last_ann\ImageSets\Main/train.txt'
+    local_file_name_list = r'E:\Dataset\inf_Integrated\VOC2007\ImageSets\Main/train.txt'
     # 指定名单
     obj_name_list = []
     for i in open(local_file_name_list, 'r'):
@@ -26,12 +26,12 @@ def copy_img():
     复制、重命名、粘贴文件
     :return:
     '''
-    local_img_name = r'E:\Dataset\detector\last_ann/mask_bmp'
+    local_img_name = r'E:\Dataset\inf_Integrated\VOC\masks'
     # 指定要复制的图片路径
-    path = r'E:\Dataset\detector\last_ann/train_mask'
+    path = r'E:\Dataset\inf_Integrated\data\t2'
     # 指定存放图片的目录
     for i in objFileName():
-        new_obj_name = i + '.bmp'
+        new_obj_name = i + '.jpg'
         shutil.copy(local_img_name + '/' + new_obj_name, path + '/' + new_obj_name)
  
  

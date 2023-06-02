@@ -44,3 +44,6 @@ some useful tools for data processing
 
   需要分别使用3个Annotations文件生成3个对应的.json文件
 
+## voc_label.py
+
+将voc格式的每一个xml文件中的标注格式转换为[class,x,y,w,h]，其中x,y是中心点坐标，并且单独输出为对应的txt文件
